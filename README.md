@@ -1,1 +1,3 @@
 # Partizipations-Tool-E-Lade-Standorte
+
+Dieses Tool dient als Beteiligungsinstrument zur Bedarfsermittlung von E-Ladesäulen in der Stadt Frankfurt. Es wird im Rahmen eines studentischen Projektes entwickelt. Die Kernfunktionalität besteht aus der kartenbasierten Erfassung von Standortwünschen der Bürger:innen in Zusammenhang einiger anonymisierter Sachinformationen (bspw. Lade-Typ, Fahrzeugdaten, Status).
