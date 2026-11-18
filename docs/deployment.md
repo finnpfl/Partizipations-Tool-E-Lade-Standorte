@@ -3,10 +3,6 @@
 Das Tool läuft auf [PythonAnywhere](https://eu.pythonanywhere.com) im **EU-Rechenzentrum** mit einem kostenlosen Beginner-Account.
 Öffentliche Adresse: `https://partizipationladesaeule.eu.pythonanywhere.com/`
 
-Platzhalter in dieser Anleitung:
-
-- `partizipationladesaeule`: PythonAnywhere-Benutzername
-- `3.13`: Python-Version auf dem Server (muss bei venv und Web-App identisch sein)
 
 ## 1. Account
 
@@ -21,7 +17,7 @@ Im Dashboard unter „Consoles“ eine **Bash**-Konsole öffnen:
 git clone https://github.com/finnpfl/Partizipations-Tool-E-Lade-Standorte.git
 cd Partizipations-Tool-E-Lade-Standorte
 ls /usr/bin/python3.*          # verfügbare Python-Versionen anzeigen
-python3.X -m venv .venv
+python3.13 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
@@ -30,16 +26,16 @@ Die lokale `.venv` wird nicht übertragen: Sie enthält feste Pfade und das Pyth
 
 ## 3. Web-App einrichten
 
-1. Reiter **Web** → **Add a new web app** → **Manual configuration** → Python `3.X` (dieselbe Version wie bei der venv).
+1. Reiter **Web** → **Add a new web app** → **Manual configuration** → Python `3.13` (dieselbe Version wie bei der venv).
 2. Auf der Seite der Web-App eintragen:
-   - **Source code:** `/home/<benutzername>/Partizipations-Tool-E-Lade-Standorte`
-   - **Virtualenv:** `/home/<benutzername>/Partizipations-Tool-E-Lade-Standorte/.venv`
+   - **Source code:** `/home/partizipationladesaeule/Partizipations-Tool-E-Lade-Standorte`
+   - **Virtualenv:** `/home/partizipationladesaeule/Partizipations-Tool-E-Lade-Standorte/.venv`
 3. Unter „Code“ die **WSGI configuration file** öffnen und den Inhalt ersetzen:
 
    ```python
    import sys
 
-   path = '/home/<benutzername>/Partizipations-Tool-E-Lade-Standorte'
+   path = '/home/partizipationladesaeule/Partizipations-Tool-E-Lade-Standorte'
    if path not in sys.path:
        sys.path.insert(0, path)
 
