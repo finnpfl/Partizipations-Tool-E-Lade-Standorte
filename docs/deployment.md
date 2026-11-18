@@ -1,12 +1,12 @@
 # Deployment auf PythonAnywhere
 
 Das Tool läuft auf [PythonAnywhere](https://eu.pythonanywhere.com) im **EU-Rechenzentrum** mit einem kostenlosen Beginner-Account.
-Öffentliche Adresse: `https://<benutzername>.eu.pythonanywhere.com/`
+Öffentliche Adresse: `https://partizipationladesaeule.eu.pythonanywhere.com/`
 
 Platzhalter in dieser Anleitung:
 
-- `<benutzername>`: PythonAnywhere-Benutzername
-- `3.X`: Python-Version auf dem Server (muss bei venv und Web-App identisch sein)
+- `partizipationladesaeule`: PythonAnywhere-Benutzername
+- `3.13`: Python-Version auf dem Server (muss bei venv und Web-App identisch sein)
 
 ## 1. Account
 
@@ -48,7 +48,7 @@ Die lokale `.venv` wird nicht übertragen: Sie enthält feste Pfade und das Pyth
 
 4. Speichern, oben auf **Reload** klicken.
 5. Unter „Security“ **Force HTTPS** aktivieren.
-6. Test: `https://<benutzername>.eu.pythonanywhere.com/` und `/health` müssen antworten.
+6. Test: `https://partizipationladesaeule.eu.pythonanywhere.com/` und `/health` müssen antworten.
 
 ### Was die WSGI-Datei macht
 
@@ -100,7 +100,7 @@ Stand: November 2026, Quelle: [Free Accounts Features](https://help.pythonanywhe
 |---|---|---|
 | Laufzeit der Web-App | **1 Monat**, danach wird sie deaktiviert | Auf dem Reiter **Web** regelmäßig verlängern. Termine im Projektplan: zum Go-Live (30.11.), Ende Dezember, Ende Januar (vor der Präsentation). Eine abgelaufene App lässt sich dort auch wieder aktivieren. |
 | Web-Apps | 1 App mit 1 Web-Worker | Anfragen werden nacheinander bearbeitet. Für eine Umfrage mit wenigen Zugriffen gleichzeitig reicht das. |
-| Adresse | nur `<benutzername>.eu.pythonanywhere.com`, keine eigene Domain | Benutzername steht auf dem QR-Code, deshalb neutral wählen. |
+| Adresse | nur `partizipationladesaeule.eu.pythonanywhere.com`, keine eigene Domain | Benutzername steht auf dem QR-Code, deshalb neutral wählen. |
 | Speicherplatz | 512 MiB | venv mit Flask braucht wenig. Für GeoPandas auf dem Server ggf. knapp, deshalb Geodaten lokal aufbereiten und nur GeoJSON hochladen. |
 | CPU-Sekunden | 100 pro Tag | Gilt für Konsolen und geplante Aufgaben, nicht für die Web-App. Rechenintensive Skripte (Analyse, Export) lokal ausführen. |
 | Ausgehende Verbindungen | nur HTTP(S) zu Seiten auf einer Allowlist | Die App ruft zur Laufzeit keine externen Dienste auf. Die BNetzA-Daten werden lokal aufbereitet und als Datei mitgeliefert (#3). `git pull` von GitHub funktioniert. |
