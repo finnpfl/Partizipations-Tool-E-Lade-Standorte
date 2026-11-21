@@ -222,3 +222,5 @@ __marimo__/
 # Projekt-spezifisch
 *.db
 .env
+data/raw/
+.DS_Store
