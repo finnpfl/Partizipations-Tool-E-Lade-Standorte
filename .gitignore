@@ -224,3 +224,4 @@ __marimo__/
 .env
 data/raw/
 .DS_Store
+data/tmp_*
