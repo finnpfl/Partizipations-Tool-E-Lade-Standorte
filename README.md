@@ -1,6 +1,6 @@
 # Partizipations-Tool-E-Lade-Standorte
 
-Dieses Tool dient als Beteiligungsinstrument zur Bedarfsermittlung von E-Ladesäulen in der Stadt Frankfurt (Stadtteil Nordend). Es wird im Rahmen eines studentischen Projektes im WiSe 2026/2027 entwickelt. Die Kernfunktionalität besteht aus der kartenbasierten Erfassung von Standortwünschen der Bürger:innen, welche mit einigen anonymisierten Sachinformationen (bspw. Lade-Typ, Fahrzeugdaten, Status) untermauert werden.
+Dieses Tool dient als Beteiligungsinstrument zur Bedarfsermittlung von E-Ladesäulen in der Stadt Frankfurt (Pilotgebiet: Stadtteil Sossenheim). Es wird im Rahmen eines studentischen Projektes im WiSe 2026/2027 entwickelt. Die Kernfunktionalität besteht aus der kartenbasierten Erfassung von Standortwünschen der Bürger:innen, welche mit einigen anonymisierten Sachinformationen (bspw. Lade-Typ, Fahrzeugdaten, Status) untermauert werden. Die Wünsche werden aus Datenschutzgründen nicht als exakte Standorte, sondern auf Basis des INSPIRE-Rasters erfasst.
 
 ## Unterschied conda und python -m venv
 Der Unterschied besteht in erster Linie in den betreuten Paketen. `conda` verwaltet Python selbst und externe Nicht-Python-Bibliotheken. `venv` hingegen nutzt eine vorhandene Python-Installation und verwaltet Python-Pakete per `pip`.
